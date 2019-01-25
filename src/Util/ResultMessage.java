@@ -1,4 +1,5 @@
 package Util;
 
-public class ResultMessage {
+public enum ResultMessage {
+
 }
