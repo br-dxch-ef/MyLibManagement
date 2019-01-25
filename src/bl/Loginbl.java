@@ -1,4 +1,4 @@
-package BLservice;
+package bl;
 
 public class Loginbl {
 }
