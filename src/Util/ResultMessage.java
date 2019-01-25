@@ -1,4 +1,6 @@
 package Util;
 
-public class ResultMessage {
+public enum ResultMessage {
+    SUCCESS,//成功
+    FAILED;//失败
 }
