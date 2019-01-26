@@ -1,18 +1,22 @@
 package bl.Notifybl;
 
+import Util.ResultMessage;
 import Vo.SystemAdminVO;
 
 public class UserInfo implements Observerable{
 
     @Override
-    public void addObserver(SystemAdminVO systemAdminVO) {
+    public ResultMessage addObserver(SystemAdminVO systemAdminVO) {
+        return ResultMessage.SUCCESS;
     }
 
     @Override
-    public void removeObserver(SystemAdminVO systemAdminVO) {
+    public ResultMessage removeObserver(SystemAdminVO systemAdminVO) {
+        return ResultMessage.SUCCESS;
     }
 
     @Override
-    public void notifyObserver() {
+    public ResultMessage notifyObserver() {
+        return ResultMessage.SUCCESS;
     }
 }

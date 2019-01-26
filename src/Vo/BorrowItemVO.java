@@ -9,6 +9,17 @@ public class BorrowItemVO {
     String dueTime;
     String returnTime;
 
+    public BorrowItemVO(String id,String userID,String bookID,String borrowTime,String dueTime,String returnTime){
+        super();
+        id=id;
+        this.userID=userID;
+        this.bookID=bookID;
+        this.borrowTime=borrowTime;
+        this.dueTime=dueTime;
+        this.returnTime=returnTime;
+    }
+    public BorrowItemVO(){}
+
     public String getId() {
         return id;
     }

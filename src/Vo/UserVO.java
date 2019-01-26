@@ -12,6 +12,16 @@ public abstract class UserVO {
 
     int borrowedNum;
 
+    public UserVO(String ID,String name,String sexual,String password,int borrowedNum){
+        super();
+        ID=ID;
+        this.name=name;
+        this.sexual=sexual;
+        this.password=password;
+        this.borrowedNum=borrowedNum;
+    }
+    public UserVO(){}
+
     public String getID() {
         return ID;
     }
@@ -34,6 +44,14 @@ public abstract class UserVO {
 
     public void setSexual(String sexual) {
         this.sexual = sexual;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public int getBorrowedNum() {

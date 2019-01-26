@@ -3,6 +3,15 @@ package Vo;
 public class BookVO {
     String ID;
     String name;
+    boolean isBorrowed;
+
+    public BookVO(String ID,String name,boolean isBorrowed){
+        super();
+        ID=ID;
+        this.name=name;
+        this.isBorrowed=isBorrowed;
+    }
+    public BookVO(){}
 
     public String getID() {
         return ID;
@@ -27,8 +36,6 @@ public class BookVO {
     public void setBorrowed(boolean borrowed) {
         isBorrowed = borrowed;
     }
-
-    boolean isBorrowed;
 
 
 

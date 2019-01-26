@@ -1,5 +1,6 @@
 package bl.Notifybl;
 
+import Util.ResultMessage;
 import Vo.SystemAdminVO;
 
 /***
@@ -8,7 +9,7 @@ import Vo.SystemAdminVO;
  */
 
 public interface Observerable {
-    public void addObserver(SystemAdminVO systemAdminVO);
-    public void removeObserver(SystemAdminVO systemAdminVO);
-    public void notifyObserver();
+    public ResultMessage addObserver(SystemAdminVO systemAdminVO);
+    public ResultMessage removeObserver(SystemAdminVO systemAdminVO);
+    public ResultMessage notifyObserver();
 }

@@ -1,18 +1,32 @@
 package Stub;
 
+import Util.ResultMessage;
 import Vo.SystemAdminVO;
 import bl.Notifybl.Observerable;
 
+import java.util.List;
+
 public class NotifyObserverableStub implements Observerable {
+    private List<SystemAdminVO> list;
     @Override
-    public void addObserver(SystemAdminVO systemAdminVO) {
+    public ResultMessage addObserver(SystemAdminVO systemAdminVO) {
+        SystemAdminVO systemAdminVO1=new SystemAdminVO();
+        list.add(systemAdminVO1);
+        System.out.println("增加系统管理员成功");
+        return ResultMessage.SUCCESS;
     }
 
     @Override
-    public void removeObserver(SystemAdminVO systemAdminVO) {
+    public ResultMessage removeObserver(SystemAdminVO systemAdminVO) {
+        SystemAdminVO systemAdminVO2=new SystemAdminVO();
+        list.remove(systemAdminVO2);
+        System.out.println("删除系统管理员成功");
+        return ResultMessage.SUCCESS;
     }
 
     @Override
-    public void notifyObserver() {
+    public ResultMessage notifyObserver() {
+        System.out.println("通知系统管理员成功");
+        return ResultMessage.SUCCESS;
     }
 }
