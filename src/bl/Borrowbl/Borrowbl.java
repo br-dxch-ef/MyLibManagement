@@ -4,23 +4,25 @@ import Util.ResultMessage;
 
 public abstract class Borrowbl {
 
-    public ResultMessage borrowBook(){
+    public ResultMessage borrowBook(String bookID,String userID){
         ResultMessage rmg = ResultMessage.FAILED;
 
-        ResultMessage verify_rmg = verifyUser();
+        ResultMessage verify_rmg = verifyUser(bookID,userID);
         if(verify_rmg==ResultMessage.SUCCESS){
-            modifyBorrowInfo();
+            modifyBorrowInfo(bookID,userID);
         }
         return rmg;
     }
 
     //可在子类中覆盖
-    public ResultMessage verifyUser(){
+    public ResultMessage verifyUser(String bookID,String userID){
+
         return ResultMessage.SUCCESS;
     }
 
     //可在子类中覆盖
-    public ResultMessage modifyBorrowInfo(){
+    public ResultMessage modifyBorrowInfo(String bookID,String userID){
+
         return ResultMessage.SUCCESS;
     }
 
