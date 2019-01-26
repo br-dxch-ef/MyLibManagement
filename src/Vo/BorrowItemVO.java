@@ -11,7 +11,7 @@ public class BorrowItemVO {
 
     public BorrowItemVO(String id,String userID,String bookID,String borrowTime,String dueTime,String returnTime){
         super();
-        id=id;
+        this.id=id;
         this.userID=userID;
         this.bookID=bookID;
         this.borrowTime=borrowTime;
