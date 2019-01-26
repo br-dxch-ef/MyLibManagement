@@ -21,7 +21,7 @@ public class AdminManageStub {
     public UserVO searchUserInfo(String userID){
         UserVO uservo = null;
         if(userID == "user1"){
-            uservo = new UndergraduateVO("user1","dsz","nan","12",2,5);
+            uservo = new UndergraduateVO("user1","dsz","男","12",2,5);
         }
         return uservo;
     }

@@ -5,7 +5,6 @@ import Vo.BookVO;
 import Vo.BorrowItemVO;
 import Vo.UndergraduateVO;
 import Vo.UserVO;
-import bl.AdminManagebl.AdminManagebl;
 import bl.AdminManagebl.SystemAdminManagebl;
 
 import java.util.ArrayList;
@@ -14,7 +13,7 @@ public class AdminManageDriver {
 
     public void adminCreateUserInfo(){
         UserVO uservo = new UndergraduateVO("user1","dsz","nan","12",2,5);
-        AdminManagebl sysAmbl = new SystemAdminManagebl();
+        SystemAdminManagebl sysAmbl = new SystemAdminManagebl();
         ResultMessage rmg = sysAmbl.createUserInfo(uservo);
         if(rmg == ResultMessage.SUCCESS){
             System.out.println("创建用户信息成功");
@@ -25,11 +24,10 @@ public class AdminManageDriver {
     }
 
     public void adminSearchUserInfo(){
-        AdminManagebl sysAmbl = new SystemAdminManagebl();
+        SystemAdminManagebl sysAmbl = new SystemAdminManagebl();
         UserVO uservo = sysAmbl.searchUserInfo("user1");
         if(uservo != null){
-            System.out.println("搜索 user1 的结果为: ");
-            System.out.println("user1" + ": " + uservo.getName() + ", " + uservo.getSexual() + ", 已借" + uservo.getBorrowedNum() + "本");
+            System.out.println("搜索 user1 的结果为: 编号" + "user1" + ", 姓名" + uservo.getName() + ", 性别" + uservo.getSexual() + ", 已借" + uservo.getBorrowedNum() + "本");
         }
         else{
             System.out.println("未搜索到 user1 用户");

@@ -14,7 +14,7 @@ public abstract class UserVO {
 
     public UserVO(String ID,String name,String sexual,String password,int borrowedNum){
         super();
-        ID=ID;
+        this.ID=ID;
         this.name=name;
         this.sexual=sexual;
         this.password=password;
